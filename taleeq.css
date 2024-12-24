@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+}
+.cover{
+    background-image: url(light-website-backgrounds-light-color-background-images-light-color-background-images-for-website-1024x640.webp);
+    height: 742px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+/*header*/
+header{
+    display: flex;
+    height: 200px;
+    justify-content: space-around;
+}
+.logo{
+    margin-top: 10px;
+}
+.logo,nav{
+    width: 40%;
+    height: 100px;
+    margin-top: 10px;
+}
+span{
+    position: relative;
+    bottom: 15px;
+    color: rgb(40, 88, 233);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+    margin-top: 15px;
+}
+a{
+    text-decoration: none;
+    color: grey;
+    opacity: .7;
+    transition: all .2;
+    font-size: 20px;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a:hover{
+    opacity: 1;
+}
+/*middle*/
+.middle{
+    display: flex;
+    justify-content: space-around;
+}
+section,article{
+    width: 40%;
+}
+h1{
+    /* position: relative;
+    left: -40px; */
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:70px;
+    animation:  space 10s infinite linear;
+    font-weight: bold;
+    color: chocolate;
+}
+@keyframes space{
+    0%,100%{
+        letter-spacing: 15px;
+    }
+    50%{
+        letter-spacing: 5px;
+    }
+}
+.one{
+    animation: hoba 10s infinite;
+}
+@keyframes hoba{
+    0%,100%{
+        transform: translate(100px);
+    }
+    50%{
+        transform: translate(0);
+    }
+}
+button{
+    display: block;
+    background:rgb(160, 28, 28);
+    padding: 15px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 7px;
+    position: relative;
+    left: 60px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all .5s;
+}
+button:hover{
+    border: #ffff  solid;
+    background: none;
+    padding: 10px;
+}
+@media(max-width:900px){
+    .cover{
+        height:1000px;
+    }
+    .middle{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    button{
+        position: relative;
+        top: 6px;
+    }
+}
+/*wave*/
+.wave{
+    background-image: url(wave.png);
+    height: 143px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    animation: waveani 50s infinite;
+}
+@keyframes waveani{
+    0%{
+        background-position: 10000px;
+    }
+    50%{
+        background-position: 5000px;
+    }
+    100%{
+        background-position: 10000px;
+    }
+}
+.wave::before{
+    background-image: url(wave.png);
+    content: "";
+    opacity: .5;
+    height: 143px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    animation: vini 50s infinite;
+}
+@keyframes vini{
+    0%{
+        background-position: -10000px;
+    }
+    50%{
+        background-position: -5000px;
+    }
+    100%{
+        background-position: -10000px;
+    }
+}
